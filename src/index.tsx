@@ -1,12 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import 'antd/dist/antd.css';
+import { ThemeProvider } from 'styled-components';
+import { ApolloProvider } from '@apollo/client';
+import { Provider } from 'react-redux';
 import reportWebVitals from './reportWebVitals';
+import theme from '~/assets/colors/themes/default';
+import client from './services/country';
+import store from './redux/store';
+import Routes from './components/Routes';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <Provider store={store}>
+        <ApolloProvider client={client}>
+          <Routes />
+        </ApolloProvider>
+      </Provider>
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

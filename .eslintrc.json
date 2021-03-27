@@ -1,0 +1,44 @@
+{
+    "env": {
+      "browser": true,
+      "es6": true
+    },
+    "extends": ["airbnb", "prettier"],
+    "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly",
+      "__DEV__": "readonly"
+    },
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "plugins": ["react", "prettier"],
+    "rules": {
+      "react/prop-types": 0,
+      "import/extensions": 0,
+      "no-unused-vars": "warn",
+      "prefer-const": "warn",
+      "prettier/prettier": "error",
+      "react/jsx-filename-extension": ["warn", { "extensions": [".jsx", ".js", ".tsx"] }],
+      "import/prefer-default-export": "off",
+      "no-param-reassign": "off",
+      "no-console": "warn"
+    },
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        },
+        "typescript": {},
+        "babel-plugin-root-import": {
+          "rootPathPrefix": "~",
+          "rootPathSuffix": "src"
+        }
+      }
+    }
+  }
