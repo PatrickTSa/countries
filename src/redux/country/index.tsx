@@ -30,6 +30,11 @@ const reducer: Reducer<CountryState> = (state = initialState, action) => {
         ...state,
         error: null,
       };
+    case CountryTypes.CHANGE:
+      return {
+        ...state,
+        list: action.payload.list,
+      };
     default:
       return state;
   }

@@ -1,23 +1,9 @@
-interface Location {
-  latitude: number;
-  longitude: number;
-}
-
-interface Language {
-  nativeName: string;
-}
-
-interface Currency {
-  name: string;
-  symbol: string;
-}
-
 interface Flag {
   svgFile: string;
 }
 
-interface CallCode {
-  name: string;
+interface TopLevelDomain {
+  name?: string;
 }
 
 export interface Country {
@@ -25,15 +11,18 @@ export interface Country {
   nativeName: string;
   area: number;
   population: number;
-  populationDensity: number;
   capital: string;
-  location: Location;
-  officialLanguages: Language;
-  currencies: Currency;
   flag: Flag;
-  callingCodes: CallCode;
+  topLevelDomains: TopLevelDomain[];
 }
 
 export interface CountryData {
   Country: Country[];
 }
+
+export type ChangeFields =
+  | 'nativeName'
+  | 'area'
+  | 'population'
+  | 'capital'
+  | 'topLevelDomains';

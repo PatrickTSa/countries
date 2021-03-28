@@ -8,6 +8,7 @@ declare module 'styled-components' {
             white: string;
             scienceblue: string;
             dodgerBlue: string;
+            scorpion: string;
         },
       font: {
           Light: string;

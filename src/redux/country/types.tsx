@@ -5,6 +5,7 @@ export enum CountryTypes {
   SET_LOADING = '@country/SET_LOADING',
   ERROR = '@country/ERROR',
   CLEAR_ERROR = '@country/CLEAR_ERROR',
+  CHANGE = '@country/CHANGE',
 }
 
 export interface CountryState {
@@ -38,4 +39,16 @@ interface Error {
   };
 }
 
-export type CountryActions = ClearError | GetCountryList | SetLoading | Error;
+interface Change {
+  type: CountryTypes.CHANGE;
+  payload: {
+    list: Country[];
+  };
+}
+
+export type CountryActions =
+  | ClearError
+  | GetCountryList
+  | SetLoading
+  | Error
+  | Change;

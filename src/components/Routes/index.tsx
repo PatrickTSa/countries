@@ -3,6 +3,10 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import CountryScreen from '~/scenes/countries';
 import DetailScreen from '~/scenes/countries/details';
 
+export interface DetailScreenParams {
+  countryId: string;
+}
+
 const Routes: React.FC = () => (
   <Router>
     <Switch>

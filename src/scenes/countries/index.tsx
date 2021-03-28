@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { List, message } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
-import { LayoutStyled, ContentStyled, Header } from './styles';
+import { LayoutStyled, ContentStyled, Header, HeaderContent } from './styles';
 import Card from '~/components/Card';
 import SearchInput from '~/components/SearchInput';
 import { getCountryList } from '~/redux/country/actions';
@@ -44,7 +44,9 @@ const CountryScreen: React.FC = () => {
   return (
     <LayoutStyled>
       <Header>
-        <SearchInput onSearch={handleFilter} />
+        <HeaderContent>
+          <SearchInput onSearch={handleFilter} />
+        </HeaderContent>
       </Header>
       <ContentStyled>
         <List

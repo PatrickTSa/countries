@@ -7,6 +7,7 @@ const defaultTheme: DefaultTheme = {
     white: '#ffffff',
     scienceblue: '#0b6ed6',
     dodgerBlue: '#40a9ff',
+    scorpion: '#595757',
   },
   font: {
     Light: 'Light',
