@@ -1,6 +1,6 @@
 # Web Countries 
 
-## Lista de países, apresentando algumas informações como bandeira, nome e capital.
+## Lista de países apresentando algumas informações como bandeira, nome e capital.
 
 ### Features
 
