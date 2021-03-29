@@ -33,13 +33,16 @@ const CountryScreen: React.FC = () => {
     }
   }, [error]);
 
-  const handleFilter = useCallback((filter: string) => {
-    setFiltered(
-      list.filter((item) =>
-        item.nativeName.toUpperCase().includes(filter.toUpperCase())
-      )
-    );
-  }, []);
+  const handleFilter = useCallback(
+    (filter: string) => {
+      setFiltered(
+        list.filter((item) =>
+          item.nativeName.toUpperCase().includes(filter.toUpperCase())
+        )
+      );
+    },
+    [list]
+  );
 
   return (
     <LayoutStyled>
