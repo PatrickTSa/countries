@@ -31,6 +31,7 @@ const reducer: Reducer<CountryState> = (state = initialState, action) => {
         error: null,
       };
     case CountryTypes.CHANGE:
+    case CountryTypes.RESET:
       return {
         ...state,
         list: action.payload.list,

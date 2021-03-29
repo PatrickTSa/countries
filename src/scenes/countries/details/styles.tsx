@@ -1,3 +1,4 @@
+import { ArrowLeftOutlined } from '@ant-design/icons';
 import { Button, Layout, Col as ColAntd } from 'antd';
 import styled from 'styled-components';
 
@@ -68,4 +69,15 @@ export const Col = styled(ColAntd).attrs(() => ({
   align-items: center;
   display: flex;
   justify-content: center;
+`;
+
+export const LeftArrow = styled(ArrowLeftOutlined)`
+  color: ${({ theme: { palette } }) => palette.scorpion};
+  font-size: 18px;
+  position: absolute;
+
+  @media (max-width: 442px) {
+    top: 5px;
+    left: 10px;
+  }
 `;

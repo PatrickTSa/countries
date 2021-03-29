@@ -13,9 +13,15 @@ interface EditInputType {
   placeholder: string;
   value: string | number;
   width?: number;
+  onSave(value: string | number): void;
 }
 
-const EditInput: React.FC<EditInputType> = ({ placeholder, value, width }) => {
+const EditInput: React.FC<EditInputType> = ({
+  placeholder,
+  value,
+  width,
+  onSave,
+}) => {
   const [disabled, setDisabled] = useState<boolean>(true);
   const [internalValue, setInternalValue] = useState<string | number>(value);
   const [type, setType] = useState<'string' | 'number'>('string');
@@ -52,6 +58,15 @@ const EditInput: React.FC<EditInputType> = ({ placeholder, value, width }) => {
     [type]
   );
 
+  const handleClick = useCallback(() => {
+    const newState = !disabled;
+    setDisabled(newState);
+
+    if (newState) {
+      onSave(internalValue);
+    }
+  }, [disabled, internalValue]);
+
   return (
     <Container>
       <Title>{placeholder}</Title>
@@ -63,7 +78,7 @@ const EditInput: React.FC<EditInputType> = ({ placeholder, value, width }) => {
           onChange={handleChange}
           styleWidth={width ?? 0}
         />
-        <Icon onClick={() => setDisabled(!disabled)}>
+        <Icon onClick={handleClick}>
           <RenderIcon />
         </Icon>
       </InputContent>
