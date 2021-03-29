@@ -20,7 +20,7 @@
 
 ### Dependências utilizadas
 
-Gerenciador de pacote: Yarn
+Gerenciador de pacotes: Yarn
 
 - Ant Design
 - Graphql
