@@ -9,6 +9,7 @@
 - [x] Tela com detalhe de cada país
 - [x] Editar as informações do país (client-side)
 - [ ] Testes
+- [x] Deploy
 
 ### Como executar?
 
@@ -33,6 +34,8 @@ Gerenciador de pacotes: Yarn
 - Redux thunk
 
 ### Demonstração
+
+https://patricktsa.github.io/countries/
 
 ![index](https://user-images.githubusercontent.com/37422938/112774566-7dd63980-9010-11eb-8152-41ef2bebbcf3.png)
 ![detail](https://user-images.githubusercontent.com/37422938/112774569-80389380-9010-11eb-9c37-f1ff04af6e07.png)
